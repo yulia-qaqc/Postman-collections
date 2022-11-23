@@ -2,7 +2,7 @@
 
 ### 1. API testing of TMS Qase.io with Postman
 
-Testing the "Projects" feature with following user stories: 
+Testing the "Projects" feature with the following user stories: 
 - get all projects
 - create new project
 - get project by code
