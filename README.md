@@ -9,6 +9,8 @@ Testing the "Projects" feature with the following user stories:
 - delete project by code
 
 Collection includes the script for visualization of the response and setting the variables.
+To run the collection in Postman you will need the token. You can download it in your personal account in Qase.io. 
+Then add your token into the current value to variable "Token" and you can run the tests. 
 
 [Postman collection](https://github.com/yulia-qaqc/Postman-collections/blob/main/Qase.io%20APi%20testing.postman_collection.json)
 
