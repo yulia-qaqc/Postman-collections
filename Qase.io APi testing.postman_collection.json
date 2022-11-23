@@ -1,0 +1,262 @@
+{
+	"info": {
+		"_postman_id": "1b54e6e6-b889-49f9-9bae-3dd26e38bca6",
+		"name": "Qase.io APi testing",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "24458088"
+	},
+	"item": [
+		{
+			"name": "Get all projects",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"var template = `\r",
+							"    <table>\r",
+							"        <tr>\r",
+							"            <th>title</th>\r",
+							"            <th>code</th>\r",
+							"            <th>suites</th>\r",
+							"            <th>cases</th>\r",
+							"        </tr>\r",
+							"\r",
+							"        {{#each response.result.entities}}\r",
+							"            <tr>\r",
+							"                <td>{{title}}</td>\r",
+							"                <td>{{code}}</td>\r",
+							"                <td>{{counts.suites}}</td>\r",
+							"                <td>{{counts.cases}}</td>\r",
+							"            </tr>\r",
+							"        {{/each}}\r",
+							"\r",
+							"    </table>\r",
+							"`;\r",
+							"\r",
+							"pm.visualizer.set(template, {\r",
+							"    response: pm.response.json()\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "apikey",
+					"apikey": [
+						{
+							"key": "in",
+							"value": "header",
+							"type": "string"
+						},
+						{
+							"key": "value",
+							"value": "d6141b54374273ac7fe023ebb5571a8ce719ea25",
+							"type": "string"
+						},
+						{
+							"key": "key",
+							"value": "Token",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "text"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://api.qase.io/v1/project",
+					"protocol": "https",
+					"host": [
+						"api",
+						"qase",
+						"io"
+					],
+					"path": [
+						"v1",
+						"project"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create new project",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"title\": \"Testing API\",\"code\": \"TAPI\"}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://api.qase.io/v1/project",
+					"protocol": "https",
+					"host": [
+						"api",
+						"qase",
+						"io"
+					],
+					"path": [
+						"v1",
+						"project"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get project by code",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://api.qase.io/v1/project/{{code}}",
+					"protocol": "https",
+					"host": [
+						"api",
+						"qase",
+						"io"
+					],
+					"path": [
+						"v1",
+						"project",
+						"{{code}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete project by code",
+			"request": {
+				"auth": {
+					"type": "apikey",
+					"apikey": [
+						{
+							"key": "in",
+							"value": "header",
+							"type": "string"
+						},
+						{
+							"key": "value",
+							"value": "d6141b54374273ac7fe023ebb5571a8ce719ea25",
+							"type": "string"
+						},
+						{
+							"key": "key",
+							"value": "Token",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "https://api.qase.io/v1/project/{{code}}",
+					"protocol": "https",
+					"host": [
+						"api",
+						"qase",
+						"io"
+					],
+					"path": [
+						"v1",
+						"project",
+						"{{code}}"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"auth": {
+		"type": "apikey",
+		"apikey": [
+			{
+				"key": "key",
+				"value": "Token",
+				"type": "string"
+			},
+			{
+				"key": "value",
+				"value": "d6141b54374273ac7fe023ebb5571a8ce719ea25",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "code",
+			"value": "TAPI"
+		}
+	]
+}
