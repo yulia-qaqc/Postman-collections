@@ -1,0 +1,106 @@
+{
+	"id": "cd7e180f-8ee5-4f8d-87ab-9ec039d7272f",
+	"name": "Qase.io APi testing Copy",
+	"timestamp": "2022-11-23T19:12:59.817Z",
+	"collection_id": "24458088-eb13c1be-c5c7-43ee-9322-fdd5e4331493",
+	"folder_id": 0,
+	"environment_id": "0",
+	"totalPass": 0,
+	"totalFail": 0,
+	"results": [
+		{
+			"id": "1b040b53-4f37-45f5-982a-9ca03782a611",
+			"name": "Get all projects",
+			"url": "https://api.qase.io/v1/project",
+			"time": 560,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				560
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "bea54807-f30a-408d-9377-cf20a0a21c33",
+			"name": "Create new project",
+			"url": "https://api.qase.io/v1/project",
+			"time": 307,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				307
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "e70f0b4c-12db-4c14-b88a-0ced12e5692f",
+			"name": "Get project by code",
+			"url": "https://api.qase.io/v1/project/TAPI",
+			"time": 185,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				185
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "63e410cd-d9db-4e7f-90e2-363f6ee38ff4",
+			"name": "Delete project by code",
+			"url": "https://api.qase.io/v1/project/TAPI",
+			"time": 765,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				765
+			],
+			"allTests": [
+				{}
+			]
+		}
+	],
+	"count": 1,
+	"totalTime": 1817,
+	"collection": {
+		"requests": [
+			{
+				"id": "1b040b53-4f37-45f5-982a-9ca03782a611",
+				"method": "GET"
+			},
+			{
+				"id": "bea54807-f30a-408d-9377-cf20a0a21c33",
+				"method": "POST"
+			},
+			{
+				"id": "e70f0b4c-12db-4c14-b88a-0ced12e5692f",
+				"method": "GET"
+			},
+			{
+				"id": "63e410cd-d9db-4e7f-90e2-363f6ee38ff4",
+				"method": "DELETE"
+			}
+		]
+	}
+}
