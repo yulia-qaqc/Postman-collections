@@ -291,10 +291,6 @@
 	],
 	"variable": [
 		{
-			"key": "code",
-			"value": "TAPI"
-		},
-		{
 			"key": "Token",
 			"value": "d6141b54374273ac7fe023ebb5571a8ce719ea25"
 		},
