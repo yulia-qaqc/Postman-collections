@@ -146,7 +146,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\"title\": \"{{$randomProductName}}\",\"code\": \"{{$randomCompanySuffix}}\"}",
+					"raw": "{\"title\": \"{{$randomProductName}}\",\"code\": \"{{$randomAbbreviation}}\"}",
 					"options": {
 						"raw": {
 							"language": "json"
