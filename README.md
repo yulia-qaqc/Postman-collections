@@ -8,7 +8,10 @@ Testing the "Projects" feature with the following user stories:
 - get project by code
 - delete project by code
 
-Collection includes the script for visualization of the response and setting the variables.
+Collection includes the scripts:
+1. for visualization of the response;
+2. for automatic creation of the variable containing data from the response body.
+
 To run the collection in Postman you will need the token. You can download it in your personal account in Qase.io. 
 Then add your token into the current value to variable "Token" and you can run the tests. 
 
