@@ -17,6 +17,4 @@ Then add your token into the current value to variable "Token" and you can run t
 
 [Postman collection](https://github.com/yulia-qaqc/Postman-collections/blob/main/Qase.io%20APi%20testing.postman_collection.json)
 
-[Test run report json](https://github.com/yulia-qaqc/Postman-collections/blob/main/Qase.io%20api%20test%20run%20report.postman_test_run.json)
-
 [API documentation](https://developers.qase.io/reference/get-projects)
