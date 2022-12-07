@@ -14,6 +14,19 @@
 					"script": {
 						"exec": [
 							"var template = `\r",
+							"    <style>\r",
+							"table {\r",
+							"  border-collapse: collapse;\r",
+							"  width: 100%;\r",
+							"}\r",
+							"th, td {\r",
+							"  text-align: left;\r",
+							"  padding: 8px;\r",
+							"}\r",
+							"tr:nth-child(even) {\r",
+							"  background-color: #D6EEEE;\r",
+							"}\r",
+							"</style>\r",
 							"    <table>\r",
 							"        <tr>\r",
 							"            <th>title</th>\r",
@@ -95,6 +108,19 @@
 		},
 		{
 			"name": "Create new project",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"var key = \"newCode\"\r",
+							"var value = pm.response.json().result.code\r",
+							"pm.collectionVariables.set(key,value);"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
 			"request": {
 				"auth": {
 					"type": "apikey",
@@ -120,7 +146,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\"title\": \"Testing API\",\"code\": \"TAPI\"}",
+					"raw": "{\"title\": \"{{$randomProductName}}\",\"code\": \"{{$randomCompanySuffix}}\"}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -169,7 +195,7 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "https://api.qase.io/v1/project/{{code}}",
+					"raw": "https://api.qase.io/v1/project/{{newCode}}",
 					"protocol": "https",
 					"host": [
 						"api",
@@ -179,7 +205,7 @@
 					"path": [
 						"v1",
 						"project",
-						"{{code}}"
+						"{{newCode}}"
 					]
 				}
 			},
@@ -211,7 +237,7 @@
 				"method": "DELETE",
 				"header": [],
 				"url": {
-					"raw": "https://api.qase.io/v1/project/{{code}}",
+					"raw": "https://api.qase.io/v1/project/{{newCode}}",
 					"protocol": "https",
 					"host": [
 						"api",
@@ -221,7 +247,7 @@
 					"path": [
 						"v1",
 						"project",
-						"{{code}}"
+						"{{newCode}}"
 					]
 				}
 			},
@@ -270,7 +296,11 @@
 		},
 		{
 			"key": "Token",
-			"value": "insert your token here"
+			"value": "d6141b54374273ac7fe023ebb5571a8ce719ea25"
+		},
+		{
+			"key": "newCode",
+			"value": ""
 		}
 	]
 }
