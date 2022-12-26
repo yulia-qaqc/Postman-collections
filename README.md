@@ -1,6 +1,6 @@
 ## Postman-collections
 
-### 1. API testing of TMS Qase.io with Postman
+### API testing of TMS Qase.io with Postman
 
 Testing the "Projects" feature with the following user stories: 
 - get all projects
